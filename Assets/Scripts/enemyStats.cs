@@ -23,7 +23,14 @@ public class enemyStats : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             health -= 25;
-            Debug.Log("Max HP was" + maxHealth + " Current HP is " + health);
+            Debug.Log("Hit by Pistol & Max HP was" + maxHealth + " Current HP is " + health);
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Shotgun"))
+        {
+            health -= 100;
+            Debug.Log("Hit by Shotgun");
             Destroy(other.gameObject);
         }
 

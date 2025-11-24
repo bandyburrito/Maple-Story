@@ -1,19 +1,39 @@
+using System;
 using UnityEngine;
 
 public class shoot : MonoBehaviour
 {
 
-    public float bulletspeed = 50f;
+    public float bulletspeed = 20f;
     public Rigidbody2D rb;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject Pistol;
+    public GameObject Shotgun;
+
+    
+   
     void Start()
     {
         gameObject.GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            
+
+            
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+
+            
+
+        }
+        
         
     }
 
@@ -21,5 +41,6 @@ public class shoot : MonoBehaviour
     {
         transform.position += transform.right * bulletspeed * Time.deltaTime;
     }
+
     
 }
